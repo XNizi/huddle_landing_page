@@ -1,0 +1,152 @@
+@use 'colors' as *;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('../../dist/img/bg-mobile.svg');
+	background-repeat: no-repeat;
+	background-color: $violet;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	padding: 20px;
+	img {
+		max-width: 100%;
+	}
+	.logo {
+		height: 30px;
+		margin-bottom: 35px;
+	}
+	.img__box {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.heading,
+	.main-text {
+		text-align: center;
+		color: white;
+	}
+	.heading {
+		margin-top: 15px;
+		font-size: 21px;
+		margin-bottom: 10px;
+		font-family: 'Poppins', sans-serif;
+	}
+	.main-text {
+		font-size: 15px;
+	}
+	.login__box {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		a {
+			background-color: #fff;
+			padding: 10px 110px;
+			border-radius: 25px;
+			text-decoration: none;
+			color: $violet;
+			transition: color 0.3s, background-color 0.3s;
+			&:hover {
+				background-color: rgb(231, 231, 231);
+				color: $Soft-Magenta;
+			}
+		}
+	}
+	.link__box {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			border-radius: 50%;
+			border: 1px solid white;
+			width: 35px;
+			height: 35px;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: $Soft-Magenta;
+			}
+			i {
+				color: white;
+				font-size: 18px;
+			}
+		}
+		.twitter {
+			margin: 0 10px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.wrapper {
+		.heading {
+			font-size: 26px;
+		}
+		.main-text {
+			font-size: 18px;
+		}
+		.login__box {
+			.register-btn {
+				padding: 20px 300px;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	body {
+		background-image: url('../../dist/img/bg-desktop.svg');
+		background-size: cover;
+		height: 100vh;
+	}
+	.wrapper {
+		margin: 0 50px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		.logo {
+			align-self: start;
+		}
+		.right__box {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+		}
+		.heading {
+			font-size: 32px;
+		}
+		.heading,
+		.main-text {
+			text-align: left;
+		}
+		.login__box {
+			.register-btn {
+				padding: 10px 80px;
+			}
+		}
+		img.mockups {
+			max-width: 900px;
+			width: 800px;
+		}
+		.img__box {
+			margin-right: 50px;
+		}
+		.link__box {
+			align-self: flex-end;
+			margin-bottom: 35px;
+		}
+	}
+}
